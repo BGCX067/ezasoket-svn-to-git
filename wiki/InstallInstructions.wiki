@@ -1,0 +1,45 @@
+#summary Installation Instructions
+=This is the installation instructions for Open Source EZASOKET=
+
+The prerequisites for following these instructions are that you have a C compiler and a COBOL compiler installed.  
+
+Currently gcc is supported for the C compiler.  MicroFocus and OpenCOBOL are the COBOL compilers supported.  We are keen on supporting others provided we can get access to the target environment.
+
+These are step by step instructions for installing Open Source EZASOKET.  The instructions in fixed-width font are cut-and-paste ready for your command line.
+
+  # login as a non-root user.
+  # {{{mkdir ezasoket}}}
+  # {{{cd ezasoket}}}
+  # download and unbundle the source using one of these methods:
+    # subversion:
+      * {{{svn checkout http://ezasoket.googlecode.com/svn/trunk/ trunk}}}
+    # curl:
+      * {{{curl http://ezasoket.googlecode.com/files/osezasoket_0.4.1.tar}}}
+      * {{{tar -xf osezasoket_0.4.1.tar}}}
+    # Typical Programmer Ingenuity
+      * download osezasoket_0.4.1.tar from the "Downloads" tab and somehow copy it to the current working directory.
+      * {{{tar -xf osezasoket_0.4.1.tar}}}
+  # note that the previous instruction created a directory called trunk. 
+  # {{{cd trunk}}}
+  # {{{./configure}}}
+  # {{{make}}}
+  # {{{cd test}}}
+  # {{{./expand 1}}}
+  # {{{./compile 1}}}
+  # {{{./runtests 1}}}
+  # repeat steps 10 through 12 for each test 1-12? that is valid for this installation. 
+
+The tests that are in use are numbered as follows:
+||Number|| Type 	|| Bit 	|| CharSet|| 
+|| 1 	|| COMP 	|| 32 	|| ASCII|| 
+|| 2 	|| BINARY 	|| 32 	|| ASCII|| 
+|| 3 	|| COMP-5 	|| 32 	|| ASCII|| 
+|| 4 	|| COMP 	|| 64 	|| ASCII|| 
+|| 5 	|| BINARY 	|| 64 	|| ASCII|| 
+|| 6 	|| COMP-5 	|| 64 	|| ASCII|| 
+|| 7 	|| COMP 	|| 32 	|| EBCDIC|| 
+|| 8 	|| BINARY 	|| 32 	|| EBCDIC|| 
+|| 9 	|| COMP-5 	|| 32 	|| EBCDIC|| 
+|| 10 	|| COMP 	|| 64 	|| EBCDIC|| 
+|| 11 	|| BINARY 	|| 64 	|| EBCDIC|| 
+|| 12 	|| COMP-5 	|| 64 	|| EBCDIC || 

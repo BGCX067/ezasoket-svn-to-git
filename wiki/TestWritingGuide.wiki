@@ -1,0 +1,16 @@
+#summary Guide for How to Write Unit Test Code and Report Bugs
+=Guide for Writing the Test Code=
+
+==Introduction==
+
+This is the guide for writing test code as a means to report bugs.
+
+==Details==
+
+  * Always use single quotes to avoid problems compiling on the mainframe.
+  * Use COMPBIN as the variable type where you want it to be replaced with COMP, BINARY, or COMP-5 based on the test.
+  * Make the test only test one thing.
+  * A test is failed if the output contains FAIL or does not contain COMPLETE.
+  * Some tests are simple and are self contained within a COBOL program.
+  * Some tests are complex and involve invoking a pair of programs or require comparison of external data.
+  * It is preferred if bugs are reported using test code so that the solution can easily be tested on all platforms.

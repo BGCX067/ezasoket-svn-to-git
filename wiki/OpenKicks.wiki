@@ -1,0 +1,11 @@
+#summary Description of OpenKicks and its Relationship to EZASOKET
+
+=Introduction=
+
+OpenKicks is an implementation of the CICS API that runs on Linux.
+
+=Details=
+
+OpenKicks is an implementation of CICS that runs on Linux. It is a product of Replatform Technologies, LLC and not affiliated with IBM. It is different from other implementations of the CICS API because it is a thin layer on a database.
+
+Open Source EZASOKET was original part of OpenKicks but was split off at the request of the OpenCOBOL folks.

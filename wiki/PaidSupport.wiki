@@ -1,0 +1,7 @@
+#summary Describes how to contact me to receive priority support
+
+Introduction
+
+Open Source EZASOKET is a open source project and you are free to change the source for your own needs or as you find bugs. If you desired/need to receive paid support then please contact pottmi+ezasoket@gmail.com.
+
+Those who pay for support will get elevated attention to their issues.

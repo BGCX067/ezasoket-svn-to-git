@@ -1,0 +1,28 @@
+#summary Guide for Writing Portable COBOL Programs for EZASOKET
+=Guide for Writing Portable COBOL Programs for EZASOKET=
+
+==Introduction==
+
+This page contains information to help COBOL programmers code EZASOKET programs such that they compile and run on a variety of platforms.
+
+==Background==
+
+COMP variables are Big Endian regardless of architecture. This has advantages for data storage but at a performance penalty for Intel hardware.
+
+==Details==
+
+COBOL programs that call EZASOKET typically use COMP variables. Open Source EZASOKET supports COMP, BINARY, and COMP-5 as long as within a run-unit the use is consistent.
+
+The use must be consistent for the variable that are passed to the EZASOKET calls.  Use of other numeric types for other variables is fine.
+
+==Rules of Thumb==
+
+  * If you want to port COBOL programs from the mainframe to Unix, and that source code consistently uses COMP, and you want to minimize the changes to the source, then use COMP.
+
+  * If you are want to port COBOL programs from the mainframe to Unix, and that source code uses a mixture of COMP, COMP-5, and BINARY, then you must pick one to standardize on.  COMP-5 would be the preference in order also get performance gains.
+
+  * If you are coding new programs, then COMP-5 is probably your best choice.
+
+  * If you are coding programs that pass data between mainframe and Unix, then you despite your choice of numeric type, you will probably want to COMP for the numeric types that are embedded in the data your are passing.
+
+The performance gains of converting from COMP to COMP-5 would not be overwhelming considering that your program is probably waiting for network.
